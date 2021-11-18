@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import bodyParser from 'body-parser';
 import compress from 'compression';
 import cors from 'cors';
