@@ -17,3 +17,9 @@ input UserInput{
 type Token{
     token: String!
 }
+
+type loginResponse{
+    message: String!
+    data: Token
+    status: String!
+}

@@ -4,7 +4,7 @@ import config from '../config/configurations';
 export class UserAPI extends RESTDataSource {
   constructor() {
     super();
-    this.baseURL = `${config.serviceUrl}/api/user`;
+    this.baseURL = `${config.serviceUrl}/api/trainee`;
   }
 
   getMe() {
@@ -12,7 +12,7 @@ export class UserAPI extends RESTDataSource {
   }
 
   async loginUser(payload) {
-    return this.post('/login', payload);
+    return this.post('/createToken', payload);
   }
 
   async updateTrainee(payload) {
