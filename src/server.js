@@ -58,6 +58,9 @@ export default class Server {
         userAPI: new UserAPI(),
         traineeAPI: new TraineeAPI(),
       }),
+      context: ({ req }) => ({
+        headers: req.header('Authorization'),
+      }),
       onHealthCheck: () => new Promise((resolve) => {
         resolve('I am OK');
       }),

@@ -4,22 +4,26 @@ import config from '../config/configurations';
 export class UserAPI extends RESTDataSource {
   constructor() {
     super();
-    this.baseURL = `${config.serviceUrl}/api/trainee`;
+    this.baseURL = `${config.serviceUrl}/api/user`;
+  }
+
+  willSendRequest(request) {
+    request.headers.set('Authorization', this.context.headers);
   }
 
   getMe() {
-    return this.get('/me');
+    return this.get('/');
   }
 
-  async loginUser(payload) {
+  loginUser(payload) {
     return this.post('/createToken', payload);
   }
 
-  async updateTrainee(payload) {
+  updateTrainee(payload) {
     return this.put('/', payload);
   }
 
-  async deleteTrainee(id) {
+  deleteTrainee(id) {
     return this.delete(`/${id}`);
   }
 }
