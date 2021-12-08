@@ -28,6 +28,7 @@
   "dependencies": {
     "@amcharts/amcharts4": "^4.10.22",
     "@babel/preset-react": "^7.16.0",
+    "apollo-datasource-rest": "^3.4.0",
     "apollo-server-express": "^2.11.0",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
